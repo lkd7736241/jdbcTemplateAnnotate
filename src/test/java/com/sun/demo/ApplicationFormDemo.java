@@ -27,21 +27,21 @@ public class ApplicationFormDemo {
 
     @Test
     public void selectApplicationFormByName() {
-        ApplicationForm form = applicationFormDao.selectApplicationFormByName("苏正荣1");
+        ApplicationForm form = applicationFormDao.selectApplicationFormByName("苏正荣2");
         System.out.println(form.toString());
     }
 
     @Test
     public void selectApplicationFormByQQ() {
-        ApplicationForm form = applicationFormDao.selectApplicationFormByQQ("22101263161");
+        ApplicationForm form = applicationFormDao.selectApplicationFormByQQ("22101263162");
         System.out.println(form.toString());
     }
 
     @Test
     public void addForm() {
         ApplicationForm form = new ApplicationForm();
-        form.setName("苏正荣10");
-        form.setQq("221012631610");
+        form.setName("苏正荣13");
+        form.setQq("221012631613");
         form.setType("Android工程师");
         form.setAdmissionTime(1537027200000L);
         form.setGraduateSchool("淮海工学院东港学院");
@@ -52,8 +52,8 @@ public class ApplicationFormDemo {
         form.setMessageChannel("知乎");
         form.setCreateAt(1542250434000L);
         form.setUpdateAt(1542250434000L);
-        boolean flag = applicationFormDao.addForm(form);
-        System.out.println(flag);
+        long id = applicationFormDao.addForm(form);
+        System.out.println(id);
     }
 
     @Test

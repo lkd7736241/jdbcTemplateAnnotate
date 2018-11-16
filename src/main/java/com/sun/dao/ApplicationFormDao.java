@@ -33,7 +33,7 @@ public interface ApplicationFormDao {
      * @param applicationForm
      * @return
      */
-    boolean addForm(ApplicationForm applicationForm);
+    long addForm(ApplicationForm applicationForm);
 
     /**
      * 根据ID删除
